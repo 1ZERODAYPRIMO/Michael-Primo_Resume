@@ -1,38 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700&family=Roboto+Mono&display=swap');
-
 :root {
   --pw-blue: #003366;
-  --accent-orange: #f59e0b;
-  --tech-silver: #94a3b8;
-  --bg-dark: #0f172a;
-  --text-main: #1e293b;
-  --text-muted: #475569;
+  --accent-orange: #F59E0B;
+  --tech-silver: #94A3B8;
+  --bg-dark: #0F172A;
 }
 
-/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
-  color: var(--text-main);
+  background: #f8fafc;
+  color: #1e293b;
 }
 
-a {
-  color: var(--pw-blue);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== HERO HEADER ===== */
+/* ================= HERO ================= */
 .hero-header {
-  background-color: var(--bg-dark);
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
-  background-size: 22px 22px;
+  background: var(--bg-dark);
   color: white;
-  padding: 42px 40px;
+  padding: 40px;
   border-bottom: 4px solid var(--pw-blue);
 }
 
@@ -41,75 +25,71 @@ a:hover {
   margin: 0 auto;
 }
 
-.top-row {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .status-badge {
-  background: rgba(245, 158, 11, 0.12);
   border: 1px solid var(--accent-orange);
   color: var(--accent-orange);
   padding: 6px 14px;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
 }
 
 .dot {
   height: 8px;
   width: 8px;
-  background-color: var(--accent-orange);
+  background: var(--accent-orange);
   border-radius: 50%;
   display: inline-block;
   margin-right: 6px;
-  animation: blink 1.6s infinite;
+  animation: blink 1.5s infinite;
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.35; }
-  100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
 .main-info {
-  margin-top: 28px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.name-block h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.2rem;
+h1 {
+  font-size: 3rem;
   margin: 0;
 }
 
 .title-tag {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  letter-spacing: 3px;
   color: var(--tech-silver);
+  letter-spacing: 3px;
+  font-size: 0.9rem;
 }
 
 .contact-grid {
-  display: grid;
-  gap: 8px;
   font-family: 'Roboto Mono', monospace;
   font-size: 13px;
 }
 
-.label {
-  color: var(--accent-orange);
-  margin-right: 8px;
+.contact-grid a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
-/* ===== TWO COLUMN LAYOUT ===== */
+.contact-grid a:hover {
+  border-bottom: 1px solid var(--accent-orange);
+}
+
+.label {
+  color: var(--accent-orange);
+}
+
+/* ================= BODY ================= */
 .resume-body {
   display: flex;
   max-width: 1100px;
-  margin: 60px auto;
+  margin: 40px auto;
   gap: 40px;
   padding: 0 40px;
 }
@@ -120,26 +100,22 @@ a:hover {
 
 .right-column {
   flex: 1;
-  background: #f8fafc;
+  background: #f1f5f9;
   padding: 25px;
-  border-left: 1px solid #e2e8f0;
-  height: fit-content;
+  border-left: 2px solid #e2e8f0;
 }
 
-/* ===== EXPERIENCE TIMELINE ===== */
+/* ================= EXPERIENCE ================= */
 .section-title {
-  color: var(--pw-blue);
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 3px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 10px;
+  color: var(--pw-blue);
+  margin-bottom: 30px;
 }
 
 .timeline-item {
   position: relative;
-  padding-left: 40px;
-  padding-bottom: 40px;
+  padding-left: 30px;
   border-left: 2px solid #e2e8f0;
 }
 
@@ -149,73 +125,62 @@ a:hover {
   top: 0;
   width: 12px;
   height: 12px;
-  background-color: var(--pw-blue);
-  border: 2px solid white;
+  background: var(--pw-blue);
   border-radius: 50%;
-}
-
-.timeline-item:hover .timeline-marker {
-  background-color: var(--accent-orange);
-  box-shadow: 0 0 10px var(--accent-orange);
 }
 
 .job-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.job-header h3 {
-  margin: 0;
-  font-size: 1.3rem;
 }
 
 .date-tag {
   font-family: 'Roboto Mono', monospace;
-  font-size: 0.8rem;
-  background: #f1f5f9;
-  padding: 4px 10px;
-  color: #64748b;
+  font-size: 0.75rem;
+  background: #e2e8f0;
+  padding: 4px 8px;
 }
 
 .company-sub {
-  color: var(--pw-blue);
   font-weight: 600;
-  margin: 6px 0 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin: 10px 0;
 }
 
-.job-description {
-  color: var(--text-muted);
-  line-height: 1.6;
+.tech-tags {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
 }
 
-/* ===== SIDEBAR ===== */
+.tech-tags li {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+  border: 1px solid #cbd5e1;
+  padding: 3px 6px;
+}
+
+/* ================= SIDEBAR ================= */
 .sidebar-title {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 2px;
-  color: var(--pw-blue);
   border-bottom: 2px solid var(--accent-orange);
-  padding-bottom: 6px;
-  margin: 30px 0 15px;
+  margin-bottom: 15px;
 }
 
 .spec-list {
   list-style: none;
   padding: 0;
-  font-size: 0.85rem;
 }
 
 .spec-label {
   font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
+  font-size: 0.7rem;
   color: var(--tech-silver);
-  font-size: 0.75rem;
 }
 
 .cert-item {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .cert-name {
@@ -226,55 +191,4 @@ a:hover {
   font-family: 'Roboto Mono', monospace;
   font-size: 0.7rem;
   color: var(--tech-silver);
-}
-
-/* ===== GAUGES ===== */
-.gauge-container {
-  margin-bottom: 14px;
-}
-
-.gauge-label {
-  font-size: 0.75rem;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.gauge-bar {
-  width: 100%;
-  height: 6px;
-  background: #e2e8f0;
-  border-radius: 3px;
-}
-
-.gauge-fill {
-  height: 100%;
-  background: var(--pw-blue);
-}
-
-/* ===== FOOTER ===== */
-.core-values {
-  text-align: center;
-  padding: 30px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  color: var(--tech-silver);
-  border-top: 1px solid #e2e8f0;
-  margin-top: 40px;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .resume-body {
-    flex-direction: column;
-  }
-
-  .main-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .contact-grid {
-    margin-top: 20px;
-  }
 }
